@@ -8,7 +8,7 @@ function showAdmin(questionId, adminUuid) {
   emoting.stats(questionId, adminUuid).done((result) => {
     console.log('[OK]', result);
 
-    result.url = `${window.location.origin}/#/${result.question.id}`;
+    result.url = `${window.location.origin}${window.location.pathname}#/${result.question.id}`;
 
     // render the admin page
     $('#default-layout-body').html(adminTemplate(result));
