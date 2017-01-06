@@ -6,12 +6,15 @@ const self = exports;
 function main(args) {
   console.log('Create', args);
 
-  if (!args.title) {
+  if (!args.title && !args.title64) {
     console.log('[KO] No title specified');
     return { ok: false };
   }
 
-  const title = args.title.trim();
+  let title = args.title || decodeURIComponent(Buffer.from(args.title64, 'base64').toString());
+
+  title = title.trim();
+
   if (title.length === 0) {
     console.log('[KO] Title is empty');
     return { ok: false };

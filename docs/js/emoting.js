@@ -6,7 +6,7 @@ const emoting = {
       type: 'PUT',
       url: `${apiUrl}/questions`,
       contentType: 'application/json; charset=utf-8',
-      data: JSON.stringify({ title: questionTitle }),
+      data: JSON.stringify({ title64: window.btoa(encodeURIComponent(questionTitle)) }),
       dataType: 'json',
     });
   },
