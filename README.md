@@ -111,7 +111,7 @@ No runtime to deploy, no server to manage :)
 |[**question.stats.js**](actions/question.stats.js)| Returns results about a given question. |
 |[**rating.create.js**](actions/rating.create.js)| Called when a user taps on one of the rating. |
 |[**options.js**](actions/options.js)| Implements the OPTIONS verb for the actions exposed through the OpenWhisk API Gateway. |
-|[**deploy.js**](deploy.js)|Helper script to install, uninstall, update the OpenWhisk actions used by the application.|
+|[**deploy.sh**](deploy.sh)|Helper script to install, uninstall, update the OpenWhisk actions used by the application.|
 
 ## License
 
