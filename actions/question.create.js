@@ -4,7 +4,7 @@ const uuid = require('uuid');
 const self = exports;
 
 function main(args) {
-  console.log('Create', args);
+  console.log('question.create', args);
 
   if (!args.title && !args.title64) {
     console.log('[KO] No title specified');
@@ -12,9 +12,9 @@ function main(args) {
   }
 
   let title = args.title || decodeURIComponent(Buffer.from(args.title64, 'base64').toString());
-
   title = title.trim();
 
+  // fail if no title provided
   if (title.length === 0) {
     console.log('[KO] Title is empty');
     return { ok: false };
@@ -37,9 +37,11 @@ function main(args) {
     );
   });
 }
-
 exports.main = global.main = main;
 
+/**
+ * Creates a new question. It assigs a uuid to the question for the admin link.
+ */
 function create(cloudantUrl, cloudantDatabase, questionTitle, callback/* err,question */) {
   const cloudant = Cloudant({
     url: cloudantUrl,
@@ -64,5 +66,4 @@ function create(cloudantUrl, cloudantDatabase, questionTitle, callback/* err,que
     }
   });
 }
-
 exports.create = create;

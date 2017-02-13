@@ -3,7 +3,7 @@ const Cloudant = require('cloudant');
 const self = exports;
 
 function main(args) {
-  console.log('Create', args);
+  console.log('rating.create', args);
 
   if (!args.questionId) {
     console.log('[KO] No questionId specified');
@@ -46,7 +46,7 @@ function create(cloudantUrl, questionsDatabase, ratingsDatabase,
     retryTimeout: 500
   });
   const db = cloudant.db.use(questionsDatabase);
-  db.get(questionId, (err, result) => {
+  db.get(questionId, (err) => {
     if (err) {
       callback(err);
     } else {

@@ -3,6 +3,8 @@ const Cloudant = require('cloudant');
 const self = exports;
 
 function main(args) {
+  console.log('question.stats', args);
+
   if (!args.id) {
     console.log('[KO] No id specified');
     return { ok: false };
