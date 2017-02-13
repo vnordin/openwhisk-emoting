@@ -2,6 +2,8 @@
 
 You are giving this presentation and as attendees leave the room you'd like to get a quick feel about how you did. *Emoting* mimics the smiley terminals you may see at the airport security or whenever you are queueing somewhere.
 
+  [![emoting](xdocs/emoting-youtube.png)](https://youtu.be/5btqydWZ8u0 "emoting")
+
   <img src="xdocs/emoting-question.png" height="200"/>
   <img src="xdocs/emoting-answer.png" height="200"/>
   <img src="xdocs/emoting-admin.png" height="200"/>
