@@ -100,6 +100,17 @@ No runtime to deploy, no server to manage :)
 
   1. Point your browser to http://127.0.0.1:8080
 
+## Code Structure
+
+| File | Description |
+| ---- | ----------- |
+|[**question.create.js**](actions/question.create.js)| Creates a new question. |
+|[**question.read.js**](actions/question.read.js)| Returns the text of a question based on its ID. |
+|[**question.stats.js**](actions/question.stats.js)| Returns results about a given question. |
+|[**rating.create.js**](actions/rating.create.js)| Called when a user taps on one of the rating. |
+|[**options.js**](actions/options.js)| Implements the OPTIONS verb for the actions exposed through the OpenWhisk API Gateway. |
+|[**deploy.js**](deploy.js)|Helper script to install, uninstall, update the OpenWhisk actions used by the application.|
+
 ## License
 
 See [LICENSE](LICENSE) for license information.
