@@ -121,3 +121,12 @@ a {
 .hero-foot {
   padding: 12px;
 }
+
+/**
+ * Question on a small screen
+ */
+@media (max-width: 460px) {
+  .ratings div {
+    display: inline-block;
+  }
+}
