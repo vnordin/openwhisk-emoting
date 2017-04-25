@@ -19,18 +19,22 @@ Built using the IBM Bluemix, the application uses:
 
 No runtime to deploy, no server to manage :)
 
-![Architecture](http://g.gravizo.com/g?
+![Alt text](https://g.gravizo.com/source/architecture?https%3A%2F%2Fraw.githubusercontent.com%2Fl2fprod%2Fopenwhisk-emoting%2Fmaster%2FREADME.md)
+<details>
+<summary></summary>
+architecture
   digraph G {
-    node [fontname = "helvetica"]
-    rankdir=LR
-    user -> github
-    github -> openwhisk [label="API Calls"]
-    openwhisk -> cloudant
-    github [shape=circle style=filled color="%234E96DB" fontcolor=white label="GitHub Pages"]
-    openwhisk [shape=circle style=filled color="%2324B643" fontcolor=white label="OpenWhisk"]
-    cloudant [shape=circle style=filled color="%234E96DB" fontcolor=white label="Cloudant"]
+    node [fontname = "helvetica"];
+    rankdir=LR;
+    user -> github;
+    github -> openwhisk [label="API Calls"];
+    openwhisk -> cloudant;
+    github [shape=circle style=filled color="%234E96DB" fontcolor=white label="GitHub Pages"];
+    openwhisk [shape=circle style=filled color="%2324B643" fontcolor=white label="OpenWhisk"];
+    cloudant [shape=circle style=filled color="%234E96DB" fontcolor=white label="Cloudant"];
   }
-)
+architecture
+</details>
 
 ## Application Requirements
 
